@@ -1,0 +1,7 @@
+tasks:
+  - 
+    name: test
+    default: true
+    plugin: go-example
+      config:
+        foo: bar  
