@@ -11,5 +11,5 @@ tasks:
   - 
     name: test
     plugin: go-example
-      config:
-        foo: bar  
+    config:
+      foo: bar  
