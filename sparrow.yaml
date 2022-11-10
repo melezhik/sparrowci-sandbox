@@ -1,7 +1,15 @@
 tasks:
+  -
+    name: main
+    default: true
+    language: Raku
+    code: |
+      say config()<tasks><test><state>.perl;
+    depends:
+      -
+        name: test
   - 
     name: test
-    default: true
     plugin: go-example
       config:
         foo: bar  
