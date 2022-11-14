@@ -1,6 +1,30 @@
 tasks:
-  - name: go_task
+  - name: main_task
     default: true
+    language: go
+    code: |
+      package main
+
+      import (
+       "fmt"
+       "github.com/melezhik/sparrowgo"
+      )
+
+      func main() {
+
+         type State struct { Message string }
+
+         var state State
+
+         sparrowgo.GetState(&state)
+
+         fmt.Printf("task state: %s\n",state.Message)
+
+      }
+    depends:
+      -
+        name: go_task
+  - name: go_task
     language: go
     config:
       Message: "Hello from Sparrow"
