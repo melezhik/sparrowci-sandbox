@@ -12,13 +12,13 @@ tasks:
 
       func main() {
 
-         type State struct { Message string }
+         type State struct { }
 
          var state State
 
-         sparrowgo.GetState(&state)
+         sparrowgo.Config(&state)
 
-         fmt.Printf("task state: %s\n",state.Message)
+         fmt.Printf("task state: %s\n",config.tasks.go_task.state.Message)
 
       }
     depends:
