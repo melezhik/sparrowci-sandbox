@@ -12,7 +12,7 @@ tasks:
 
       func main() {
 
-         var task_state interface { }
+         task_state := make(map[string](map[string](map[string](map[string]interface{}))))
 
          sparrowgo.Config(&task_state)
 
