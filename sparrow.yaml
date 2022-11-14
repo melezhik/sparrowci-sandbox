@@ -16,7 +16,7 @@ tasks:
 
          sparrowgo.Config(&task_state)
 
-         fmt.Printf("task state: %s\n",task_state["tasks"]["go_task"]["state"]["Message"]
+         fmt.Printf("task state: %s\n",task_state["tasks"]["go_task"]["state"]["Message"])
 
       }
     depends:
