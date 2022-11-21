@@ -1,13 +1,14 @@
 secrets:
-  - foo
+  - FEZ_TOKEN
 tasks:
   - name: fez-upload
     default: true
     language: Raku
     init: |
       run_task "test";
-      set_stdout(config()<tasks><git-commit><state><comment>);
-      run_task "upload";
+      if config()<tasks><git-commit><state><comment> ~~ /'ci: zef upload'/ {
+        run_task "upload"
+      }
     subtasks:
     - 
       name: test
@@ -21,8 +22,13 @@ tasks:
       language: Bash
       code: |
         set -e
+        cat << "HERE" > ~/.fez-config.json
+          {"groups":[],"un":"melezhik","key":"${FEZ_TOKEN}"}
+        HERE
         cd source/
-        echo "OKOK ${foo}"
+        fez checbuild
+        tom --clean
+        fez upload
     depends:
       -
         name: git-commit
