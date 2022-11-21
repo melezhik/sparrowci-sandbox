@@ -1,0 +1,12 @@
+{
+  "authors" : [
+    "Alexey Melezhik"
+  ],
+  "description" : "SparrowCI::Sandbox",
+  "license" : "Artistic-2.0",
+  "name" : "SparrowCI-SandBox",
+  "provides" : {
+    "SparrowCI::Sandbox" : "lib/SparrowCI/Sandbox.rakumod"
+  },
+  "version" : "0.0.1"
+}

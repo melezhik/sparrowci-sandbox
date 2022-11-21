@@ -1,3 +1,9 @@
 # sparrowci-sandbox
 
-Testing environment for SparrowCI pipelines
+The only purpose of this module is demonstrate SparrowCI pipeline
+
+# sparrow.yaml
+
+# Author
+
+Alexey Melezhik
