@@ -6,6 +6,7 @@ tasks:
     language: Raku
     init: |
       run_task "test";
+      set_stdout(config()<tasks><git-commit><state><comment>);
       run_task "upload";
     subtasks:
     - 
@@ -14,7 +15,7 @@ tasks:
       code: |
         set -e
         cd source
-        fez test .
+        zef test .
     -
       name: upload
       language: Bash
