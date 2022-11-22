@@ -27,7 +27,7 @@ tasks:
         HERE
         cd source/
         zef install --/test fez
-        fez checbuild
+        fez checkbuild
         tom --clean
         fez upload
     depends:
