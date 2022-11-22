@@ -6,7 +6,7 @@ tasks:
     language: Raku
     init: |
       run_task "test";
-      if config()<tasks><git-commit><state><comment> ~~ /'ci: zef upload'/ {
+      if config()<tasks><git-commit><state><comment> ~~ /'ci: fez upload'/ {
         run_task "upload"
       }
     subtasks:
