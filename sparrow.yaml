@@ -26,6 +26,7 @@ tasks:
           {"groups":[],"un":"melezhik","key":"${FEZ_TOKEN}"}
         HERE
         cd source/
+        zef install --/test fez
         fez checbuild
         tom --clean
         fez upload
