@@ -32,6 +32,7 @@ tasks:
         zef install --/test fez
         fez checkbuild
         tom --clean
+        sudo cat /etc/resolv.conf 
         curl --trace-ascii - api.zef.pm
         fez upload
     depends:
