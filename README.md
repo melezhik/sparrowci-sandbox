@@ -39,7 +39,7 @@ tasks:
         cd source/
         fez checkbuild
         tom --clean
-        fez upload
+        echo | fez upload
     depends:
       -
         name: git-commit
