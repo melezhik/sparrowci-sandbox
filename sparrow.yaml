@@ -30,11 +30,11 @@ tasks:
         HERE
         cd source/
         zef install --/test fez
-        fez checkbuild
+        # fez checkbuild
         tom --clean
-        sudo cat /etc/resolv.conf 
-        curl --trace-ascii - api.zef.pm
-        fez upload
+        # sudo cat /etc/resolv.conf 
+        # curl --trace-ascii - api.zef.pm
+        fez upload < /dev/null 
     depends:
       -
         name: git-commit
