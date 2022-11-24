@@ -33,7 +33,7 @@ tasks:
       language: Bash
       code: |
         set -e
-        sudo apt-get install -y unbuffer
+        sudo apt-get install -y expect
         cat << HERE > ~/.fez-config.json
           {"groups":[],"un":"melezhik","key":"${FEZ_TOKEN}"}
         HERE
