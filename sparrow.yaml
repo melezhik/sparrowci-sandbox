@@ -25,15 +25,14 @@ tasks:
       language: Bash
       code: |
         set -e
+        sudo apt-get install -y unbuffer
         cat << HERE > ~/.fez-config.json
           {"groups":[],"un":"melezhik","key":"${FEZ_TOKEN}"}
         HERE
         cd source/
         zef install --/test fez
-        # fez checkbuild
         tom --clean
-        # curl --trace-ascii - api.zef.pm
-        fez upload < /dev/null 
+        unbuffer fez upload
     depends:
       -
         name: git-commit
