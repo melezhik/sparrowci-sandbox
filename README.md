@@ -1,12 +1,16 @@
 # sparrowci-sandbox
 
-The only purpose of this module is demonstrate SparrowCI pipeline
+The only purpose of this module is to demonstrate 
+usage of SparrowCI pipeline in Raku module automation.
 
 # sparrow.yaml
 
-This pipeline runs zef test and
-uploads module via fez if commit message contains
-"ci: fez upload" string
+This pipeline runs `zef test` and then 
+if a commit message contains "ci: fez upload" string
+uploads a module via `fez upload`.
+
+Pipeline requires fez token set as secret
+in user's account in SparrowCI.
 
 ```yaml
 secrets:
