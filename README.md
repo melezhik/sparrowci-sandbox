@@ -13,15 +13,18 @@ Pipeline requires fez token set as secret
 in user's account in SparrowCI.
 
 ```yaml
+image:
+  - melezhik/sparrow:debian
+
 secrets:
   - FEZ_TOKEN
 tasks:
-  - name: fez-upload
+  - name: test-and-release
     default: true
     language: Raku
     init: |
       run_task "test";
-      if config()<tasks><git-commit><state><comment> ~~ /'ci: fez upload'/ {
+      if %*ENV<SCM_COMMIT_MESSAGE> ~~ /'release!'/ {
         run_task "upload"
       }
     subtasks:
@@ -30,6 +33,7 @@ tasks:
       language: Bash
       code: |
         set -e
+        env|grep SCM
         cd source
         zef test .
     -
@@ -38,19 +42,12 @@ tasks:
       code: |
         set -e
         cat << HERE > ~/.fez-config.json
-          {"groups":[],"un":"melezhik","key":"${FEZ_TOKEN}"}
+          {"groups":[],"un":"melezhik","key":"$FEZ_TOKEN"}
         HERE
         cd source/
         zef install --/test fez
         tom --clean
         fez upload
-    depends:
-      -
-        name: git-commit
-  - name: git-commit
-    plugin: git-commit-data
-    config:
-      dir: source
 ```
 # Author
 
