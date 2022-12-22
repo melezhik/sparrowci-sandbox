@@ -6,7 +6,7 @@ usage of SparrowCI pipeline in Raku module automation.
 # sparrow.yaml
 
 This pipeline runs `zef test` and then 
-if a commit message contains "ci: fez upload" string
+if a commit message contains `release!` string
 uploads a module via `fez upload`.
 
 Pipeline requires fez token set as secret
