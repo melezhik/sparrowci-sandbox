@@ -2,9 +2,13 @@ Revision history for SparrowCI::SandBox
 
 {{$NEXT}}
 
+0.0.5 2023-01-09T09:25:00Z
+
+  Document `--unattended` option
+  
 0.0.4 2023-01-09T09:20:00Z
 
-  Use the latest version version
+  Use the latest version
   of fez with --unattented option
   to release
 
