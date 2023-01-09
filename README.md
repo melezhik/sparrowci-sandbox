@@ -41,13 +41,16 @@ tasks:
       language: Bash
       code: |
         set -e
+
         cat << HERE > ~/.fez-config.json
           {"groups":[],"un":"melezhik","key":"$FEZ_TOKEN"}
         HERE
+
         cd source/
         zef install --/test fez
+
         tom --clean
-        fez upload
+        fez upload --unattended
 ```
 # Author
 
