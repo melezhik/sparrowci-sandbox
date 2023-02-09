@@ -2,6 +2,10 @@ Revision history for SparrowCI::SandBox
 
 {{$NEXT}}
 
+0.0.7 2023-02-09T09:40:00Z
+
+  Testing fez upload --unattended issue
+
 0.0.6 2023-01-10T15:30:00Z
 
   Example of conditional task
