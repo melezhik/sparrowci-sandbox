@@ -27,6 +27,8 @@ tasks:
     code: |
       set -e
 
+      sudo apk add unzip
+
       zef install --/test https://github.com/tony-o/raku-fez/archive/refs/heads/dist.zip
 
       cat << HERE > ~/.fez-config.json
