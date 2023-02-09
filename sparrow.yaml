@@ -25,6 +25,7 @@ tasks:
       set -e
 
       sudo apk add unzip
+      sudo apk add tar --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
 
       zef install --/test https://github.com/tony-o/raku-fez/archive/refs/heads/dist.zip
 
