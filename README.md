@@ -14,7 +14,7 @@ in user's account in SparrowCI.
 
 ```yaml
 image:
-  - melezhik/sparrow:debian
+  - melezhik/sparrow:debian_arm
 
 secrets:
   - FEZ_TOKEN
@@ -54,5 +54,3 @@ tasks:
 # Author
 
 Alexey Melezhik
-
-
